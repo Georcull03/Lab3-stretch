@@ -9,7 +9,7 @@ pipeline {
         stage('Build'){
             steps {
                 sh "sh build.sh"
-                sh "docker tag flask-app:${BUILD_NUMBER}"
+                sh "docker tag flask-app flask-app:${BUILD_NUMBER}"
             }
         }
         stage('Deploy'){
